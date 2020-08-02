@@ -5,7 +5,7 @@
 </template>
 
 <script>
-// @ is an alias to /src
+import axios from "axios";
 import App from "@/components/App.vue";
 
 export default {
