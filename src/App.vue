@@ -2,12 +2,12 @@
   <v-app id="inspire">
     <v-main>
       <div id="app">
+        <router-view />
         <div id="nav">
           <router-link to="/login">Login</router-link> |
           <router-link to="/home">Home</router-link> |
           <router-link to="/about">About</router-link>
         </div>
-        <router-view />
       </div>
     </v-main>
   </v-app>

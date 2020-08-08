@@ -4,13 +4,10 @@
 
 <script>
 export default {
-  methods: {
-    set_acces_token: function () {
-      this.access_token = window.location.href
-        .split("#")[1]
-        .split("&")[0]
-        .split("=")[1];
-    },
+  mounted: function () {
+    let token = window.location.href.split("#")[1].split("&")[0].split("=")[1];
+    this.$store.commit("set_access_token", token);
+    this.$router.push("home");
   },
 };
 </script>
