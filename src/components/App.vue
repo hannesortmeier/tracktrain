@@ -7,6 +7,8 @@
         <v-row align="start" justify="center">
           <v-col cols="6">
             <Search />
+            <p>Progress: {{ progress_sec }}</p>
+            <p>Duration: {{ duration_sec }}</p>
             <SearchList />
           </v-col>
         </v-row>
@@ -29,8 +31,16 @@ export default {
     Search,
     SearchList,
   },
-  data: () => ({}),
-  methods: {},
+
+  computed: {
+    progress_sec: function () {
+      return Math.floor(this.$store.state.player.progress_ms / 1000);
+    },
+
+    duration_sec: function () {
+      return Math.floor(this.$store.state.player.item.duration_ms / 1000);
+    },
+  },
 };
 </script>
 
