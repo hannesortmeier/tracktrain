@@ -32,15 +32,12 @@ export default {
       let client_id = "client_id=03ae5d1e3fda46ef9a69d085019de2ed&";
       let response_type = "response_type=token&";
       let redirect_uri =
-        "redirect_uri=" +
-        encodeURIComponent("http://localhost:8080/callback") +
-        "&";
+        "redirect_uri=" + encodeURIComponent("http://localhost:8080/callback") + "&";
       let code_challenge_method = "code_challenge_method=S256&";
       let scope =
         "scope=user-modify-playback-state,user-read-currently-playing,user-read-recently-played,user-read-playback-state&";
       let state = "state=application-state";
-      window.location.href =
-        uri + client_id + response_type + redirect_uri + scope;
+      window.location.href = uri + client_id + response_type + redirect_uri + scope;
     },
   },
 };

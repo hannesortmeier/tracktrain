@@ -7,8 +7,19 @@ import '@babel/polyfill'
 import 'roboto-fontface/css/roboto/roboto-fontface.css'
 import '@mdi/font/css/materialdesignicons.css'
 import VueSimpleAlert from "vue-simple-alert";
+import VueCookies from 'vue-cookies'
+
+Vue.use(VueCookies)
 
 Vue.use(VueSimpleAlert);
+
+import * as update from "./update";
+import axios from "axios";
+
+axios.interceptors.response.use((response) => {
+  update.update_from_cookies();
+  return response;
+});
 
 Vue.config.productionTip = false
 

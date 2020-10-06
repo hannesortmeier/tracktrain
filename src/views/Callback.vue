@@ -7,6 +7,7 @@ export default {
   mounted: function () {
     let token = window.location.href.split("#")[1].split("&")[0].split("=")[1];
     this.$store.commit("set_access_token", token);
+    this.$store.commit("logged_in", true);
     this.$router.push("home");
   },
 };

@@ -5,9 +5,22 @@ import de from 'vuetify/es5/locale/de';
 
 Vue.use(Vuetify);
 
-export default new Vuetify({
-    lang: {
-      locales: { de },
-      current: 'de',
+const vuetify = new Vuetify({
+  theme: {
+    themes: {
+      light: {
+        background: "#ebefe8"
+      },
+      dark: {
+        background: "#fdbe01"
+      }
     },
+  },
+})
+
+export default new Vuetify({
+  lang: {
+    locales: { de },
+    current: 'de',
+  },
 });

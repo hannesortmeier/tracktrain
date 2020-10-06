@@ -45,30 +45,13 @@ export default {
       })
         .then((response) => console.log(response.status))
         .catch((error) => console.log(error));
-    },
-
-    get_player: function () {
-      const headers = {
-        Authorization: "Bearer " + this.$store.state.access_token,
-      };
-      let res = axios({
-        method: "get",
-        url: "https://api.spotify.com/v1/me/player",
-        headers: headers,
-      })
-        .then((response) => response.data)
-        .catch((error) => console.log(error));
-      return res;
+      this.$store.commit("add_to_queue", track);
     },
 
     queueing_card: async function (track) {
       let message = "Do you want to add the track to the queue?";
       this.$confirm(message, track.title).then(() => {
         this.add_to_queue(track);
-        this.get_player().then((data) => {
-          console.log("data", data);
-          this.$store.commit("refresh_player", data);
-        });
       });
     },
   },
