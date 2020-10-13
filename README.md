@@ -2,7 +2,7 @@
 
 Simple frontend done with vuejs for adding spotify tracks to the spotify player queue. Perfect for parties since there is no pause or skip button. The only functionality is to search for tracks and to add them to the current queue.
 
-Since there is no way to get the current queue from the spotify api, the app can only show the queue that was inserted through the app.
+Since there is no way to get the current queue from the spotify api, the app can only show tracks in the queue that were inserted through the app.
 
 There is still a lot to do!
 
