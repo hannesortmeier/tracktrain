@@ -6,7 +6,7 @@ Since there is no way to get the current queue from the spotify api, the app can
 
 There is still a lot to do!
 
-It looks like you are not able to add tracks to the spotify queue through the spotify api if the device you are listening from is a wlan speaker.
+It looks like you are not able to add tracks to the spotify queue through the spotify api if the device you are listening from is a wlan speaker. This is why the project is currently on ice. Spotify needs to fix their api first.
 
 ## Project setup
 ```
